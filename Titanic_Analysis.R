@@ -153,7 +153,7 @@ control <- rpart.control(minsplit = 5,
 tune_dt <- rpart(Survived~., data = train, method = 'class', control = control)
 performance_tune(tune_dt)
 
-new_test <- read.csv("../Data/titanic/test.csv", na.strings = "")
+new_test <- read.csv("./test.csv", na.strings = "")
 new_test = na.omit(new_test)
 missmap(new_test, col=c("black", "grey"))
 
